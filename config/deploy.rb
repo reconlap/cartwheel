@@ -2,13 +2,17 @@
 lock '3.4.1'
 
 set :application, 'Cartwheel'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :user, "spree"
+
+#set :repo_url, 'git@example.com:me/my_repo.git'
+set :repository, "/home/spree/cartwheel/cartwheel.git"
+set :local_repository, "localhost:/home/mec/dev/cartwheel.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/spree/#{application}'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -46,3 +50,4 @@ namespace :deploy do
   end
 
 end
+
